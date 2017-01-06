@@ -79,7 +79,8 @@ class ViewController: UIViewController {
         super.viewDidDisappear(animated)
         //print("view did disappear")
     }
-
+    
+    
     @IBAction func onEditingChanged(sender: AnyObject) {
         var tipPercentage = tipPercentages[tipController.selectedSegmentIndex]
         
@@ -88,12 +89,27 @@ class ViewController: UIViewController {
         let tip = billAmount * tipPercentage
         let total = billAmount + tip
         
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        //tipLabel.text = String(format: "%.2f", tip)
+        //totalLabel.text = String(format: "$%.2f", total)
+        tipLabel.text = tip.asLocaleCurrency
+        totalLabel.text = total.asLocaleCurrency
+        
     }
 
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
+    }
+}
+
+extension Double {
+    var asLocaleCurrency:String {
+        var formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        formatter.locale = NSLocale.currentLocale()
+        formatter.maximumFractionDigits = 2
+        formatter.groupingSize = 3
+        formatter.groupingSeparator = ","
+        return formatter.stringFromNumber(self)!
     }
 }
 

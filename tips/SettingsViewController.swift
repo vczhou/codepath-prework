@@ -31,12 +31,13 @@ class SettingsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         //println("view will appear")
-        if(!set){
+        if(!set) {
             lowField.text = "18"
             midField.text = "20"
             highField.text = "22"
             set = true
-        }else{
+        } else{
+            print("hello");
             lowField.text = tipsValues.objectForKey("one") as! String
             midField.text = tipsValues.objectForKey("two") as! String
             highField.text = tipsValues.objectForKey("three") as! String
@@ -63,6 +64,7 @@ class SettingsViewController: UIViewController {
         }
         tipsValues.setObject(lowField.text, forKey: "one")
         tipsValues.synchronize()
+        set = true;
     }
 
     @IBAction func updateMid(sender: AnyObject) {
@@ -71,6 +73,7 @@ class SettingsViewController: UIViewController {
         }
         tipsValues.setObject(midField.text, forKey: "two")
         tipsValues.synchronize()
+        set = true;
     }
     
     @IBAction func updateHigh(sender: AnyObject) {
@@ -79,6 +82,7 @@ class SettingsViewController: UIViewController {
         }
         tipsValues.setObject(highField.text, forKey: "three")
         tipsValues.synchronize()
+        set = true;
     }
     
     @IBAction func updateAll(sender: AnyObject) {
@@ -100,6 +104,7 @@ class SettingsViewController: UIViewController {
         }
         tipsValues.setObject(highField.text, forKey: "three")
         tipsValues.synchronize()
+        set = true;
         
     }
 }
