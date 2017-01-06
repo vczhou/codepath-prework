@@ -13,6 +13,7 @@
 		55D6E8991C937FAF0002574B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D6E8981C937FAF0002574B /* Images.xcassets */; };
 		55D6E89C1C937FAF0002574B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55D6E89A1C937FAF0002574B /* LaunchScreen.xib */; };
 		55D6E8A81C937FB00002574B /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6E8A71C937FB00002574B /* tipsTests.swift */; };
+		55D6E8B21C938D4E0002574B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6E8B11C938D4E0002574B /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		55D6E8A11C937FB00002574B /* tipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D6E8A61C937FB00002574B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55D6E8A71C937FB00002574B /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
+		55D6E8B11C938D4E0002574B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				55D6E8911C937FAF0002574B /* AppDelegate.swift */,
 				55D6E8931C937FAF0002574B /* ViewController.swift */,
 				55D6E8951C937FAF0002574B /* Main.storyboard */,
+				55D6E8B11C938D4E0002574B /* SettingsViewController.swift */,
 				55D6E8981C937FAF0002574B /* Images.xcassets */,
 				55D6E89A1C937FAF0002574B /* LaunchScreen.xib */,
 				55D6E88F1C937FAF0002574B /* Supporting Files */,
@@ -214,6 +217,7 @@
 			files = (
 				55D6E8941C937FAF0002574B /* ViewController.swift in Sources */,
 				55D6E8921C937FAF0002574B /* AppDelegate.swift in Sources */,
+				55D6E8B21C938D4E0002574B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -351,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
